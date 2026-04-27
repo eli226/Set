@@ -12,6 +12,7 @@ class UsedBuck {
     public:
     UsedBuck() {
         head = nullptr;
+        count = 0;
     }
     void newNode(List2* index) {
         used* node = new used;
