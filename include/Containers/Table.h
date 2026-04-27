@@ -2,12 +2,12 @@
 #include "AbstractClasses/TableAbstract.h"
 #include "List2.h"
 #include <cstring>
-
-class Set;
+#include "UsedBuck.h"
 
 class Table : public AbstractTable {
     friend class Set;
 private:
+    UsedBuck _used;
     List2** buckets;
     size_t capacity;
     int count;
@@ -36,7 +36,11 @@ public:
     // Вставка элемента
     void insert(void* elem, size_t size) {
         size_t idx = get_hash(elem, size);
+        bool WasEmpty = buckets[idx]->empty();
         buckets[idx]->push_front(elem, size);
+        if (WasEmpty) {
+            _used.newNode(buckets[idx]);
+        }
         count++;
     }
 
@@ -46,6 +50,10 @@ public:
         Iterator* it = buckets[idx]->find(elem, size);
         if (it != nullptr) {
             buckets[idx]->remove(it);
+            bool wasEmpty = buckets[idx]->empty();
+            if (wasEmpty) {
+                _used.remove(buckets[idx]);
+            }
             delete it;
             count--;
         }
