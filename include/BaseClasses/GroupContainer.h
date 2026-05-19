@@ -6,4 +6,5 @@ class GroupContainer: public Container
 {
 public:
     GroupContainer(MemoryManager &mem): Container(mem) {}
+
 };

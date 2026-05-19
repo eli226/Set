@@ -3,7 +3,7 @@
 #include "List2.h"
 
 class UsedBuck {
-    typedef struct used{
+    typedef struct used {
         used* next;
         List2* bucket;
     }used;
@@ -29,7 +29,6 @@ class UsedBuck {
         node->next = head;
         head = node;
         count++;
-        std::cout << "node added" << count << std::endl;
     }
     int remove(List2* buck) {// return -1 - ошибка выполнения // return 0 - успех
         used* curr = head;

@@ -2,6 +2,7 @@
 #include "AbstractClasses/SetAbstract.h"
 #include "List2.h"
 #include "Table.h"
+#include "UsedBuck.h"
 
 class Set final : public AbstractSet  {
 private:

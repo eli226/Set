@@ -7,7 +7,7 @@ void *Set::Iterator::getElement(size_t &size) {
     }
     return _iterator->getElement(size);
 }
-bool Set::Iterator::hasNext() {// подумать над ускорением, лучшая идея которая у меня появилась это список
+bool Set::Iterator::hasNext() {
     if (_iterator == nullptr) {
         return false;
     }
@@ -90,25 +90,26 @@ AbstractSet::Iterator* Set::newIterator() { // работает исправно
     return nullptr;
 }
 int Set::insert(void* elem, size_t size) {
-    if (find(elem, size) != nullptr)
-        return -1;
-    else {
-        size_t hash = _table->get_hash(elem, size);
-        _table->buckets[hash]->push_front(elem, size);
-        return 0;
+    AbstractSet::Iterator* it = find(elem, size);
+    if (it != nullptr) {
+        delete it;
+        return 1;
     }
-    return -2;
+    else {
+        _table->insert(elem, size);
+    }
+    return 0;
 }
 void Set::remove(AbstractSet::Iterator *iter) { //работает исправно
     if (iter == nullptr) { return; }
-
     Set::Iterator* it = (Set::Iterator*)(iter);
-    if (it == nullptr) { return; }
-
     (*it->getCurrBucket())->remove(it->getCurrBucketIterator());
 
     if (it->getCurrBucketIterator() == nullptr) {
         it->goToNext();
+    }
+    if ((*it->getCurrBucket())->empty()) {
+        //_table->_used.remove(*it->getCurrBucket());
     }
 }
 int Set::size() { //не тестировал
@@ -121,14 +122,5 @@ void Set::clear() { // не тестировал
     _table->clear();
 }
 bool Set::empty() { // не тестировал
-    List2** start = _table->buckets;
-    List2** end = start + _table->capacity;
-    List2** curr = start;
-    while (curr != end) {
-        if (!(*curr)->empty()) {
-            return false;
-        }
-        curr++;
-    }
-    return true;
+    return _table->empty();
 }
