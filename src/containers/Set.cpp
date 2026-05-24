@@ -61,20 +61,14 @@ bool Set::Iterator::equals(Container::Iterator* right) {
     return false;
 }
 AbstractSet::Iterator* Set::find(void* elem, size_t size) {
-    List2** _start = _table->buckets;
-    List2** _end = _start + _table->capacity;
-    List2** curr = _start;
-    List2::ListIterator* res;
-    while (curr != _end) {
-        if (!(*curr)->empty()) {
-            res = (List2::ListIterator*)((*curr)->find(elem, size));
-            if (res != nullptr) {
-                return new Iterator(curr, _end, res);
-            }
-        }
-        curr++;
+    size_t hash = _table->get_hash(elem, size);
+    List2::ListIterator* res = dynamic_cast<List2::ListIterator*>(_table->buckets[hash]->find(elem, size));
+    if (res == nullptr) {
+        return nullptr;
     }
-    return nullptr;
+    else {
+        return new Iterator(&(_table->buckets[hash]),(_table->buckets + _table->capacity), res);
+    }
 }
 AbstractSet::Iterator* Set::newIterator() { // работает исправно
     List2** _start = _table->buckets;
