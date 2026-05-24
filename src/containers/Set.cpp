@@ -22,9 +22,11 @@ bool Set::Iterator::hasNext() {
     return false;
 }
 void Set::Iterator::goToNext() {
-    bool res;
-    res = hasNext();
-    if (res == false) {
+    bool res = _iterator->hasNext();
+    if (res) {
+        _iterator->goToNext();
+    }
+    else {
         _curr_buckets++;
         while (_curr_buckets != _end) {
             if (!(*_curr_buckets)->empty()) {
