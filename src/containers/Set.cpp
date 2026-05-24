@@ -21,6 +21,7 @@ bool Set::Iterator::hasNext() {
     }
     return false;
 }
+
 void Set::Iterator::goToNext() {
     bool res = _iterator->hasNext();
     if (res) {
@@ -31,31 +32,14 @@ void Set::Iterator::goToNext() {
         while (_curr_buckets != _end) {
             if (!(*_curr_buckets)->empty()) {
                 delete _iterator;
-                _iterator = dynamic_cast<List2::ListIterator*>((*_curr_buckets)->newIterator());
+                _iterator =  dynamic_cast<List2::ListIterator*>((*_curr_buckets)->newIterator());
                 break;
             }
             _curr_buckets++;
         }
         if (_curr_buckets == _end) {
+            delete _iterator;
             _iterator = nullptr;
-        }
-    }
-    else {
-        if (_iterator->hasNext()) {
-            _iterator->goToNext();
-        } else {
-            _curr_buckets++;
-            while (_curr_buckets != _end) {
-                if (!(*_curr_buckets)->empty()) {
-                    delete _iterator;
-                    _iterator = dynamic_cast<List2::ListIterator*>((*_curr_buckets)->newIterator());
-                    break;
-                }
-                _curr_buckets++;
-            }
-            if (_curr_buckets == _end) {
-                _iterator = nullptr;
-            }
         }
     }
 }
