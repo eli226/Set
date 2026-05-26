@@ -13,7 +13,6 @@ public:
         List2::ListIterator* _iterator;
         List2** _curr_buckets;
         List2** _end;
-
     public:
         Iterator(List2** curr_buckets, List2** end, List2::ListIterator* iterator) :
         _iterator(iterator), _curr_buckets(curr_buckets), _end(end) {

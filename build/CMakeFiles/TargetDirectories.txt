@@ -1,0 +1,3 @@
+/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles/set.dir
+/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles/edit_cache.dir
+/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles/rebuild_cache.dir

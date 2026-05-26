@@ -44,6 +44,12 @@ void Set::Iterator::goToNext() {
     }
 }
 bool Set::Iterator::equals(Container::Iterator* right) {
+    Set::Iterator* it = dynamic_cast<Set::Iterator*>(right);
+    if (it == nullptr) return false;
+    if (_curr_buckets == it->_curr_buckets) {
+        if (_iterator->get_current() == it->_iterator->get_current()) return true;
+        return false;
+    }
     return false;
 }
 AbstractSet::Iterator* Set::find(void* elem, size_t size) {
@@ -84,13 +90,13 @@ void Set::remove(AbstractSet::Iterator *iter) { //работает исправ�
     if (iter == nullptr) { return; }
     Set::Iterator* it = (Set::Iterator*)(iter);
     (*it->getCurrBucket())->remove(it->getCurrBucketIterator());
-
+    _table->count--;
     if (it->getCurrBucketIterator() == nullptr) {
         it->goToNext();
     }
-    if ((*it->getCurrBucket())->empty()) {
+    /*if ((*it->getCurrBucket())->empty()) {
         //_table->_used.remove(*it->getCurrBucket());
-    }
+    }*/
 }
 int Set::size() { //не тестировал
     return _table->size();
