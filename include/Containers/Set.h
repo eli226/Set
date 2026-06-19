@@ -10,32 +10,22 @@ private:
 public:
     class Iterator : public AbstractSet::Iterator {
     private:
-        List2::ListIterator* _iterator;
-        List2** _curr_buckets;
-        List2** _end;
+        Container::Iterator* _iter;
     public:
-        Iterator(List2** curr_buckets, List2** end, List2::ListIterator* iterator) :
-        _iterator(iterator), _curr_buckets(curr_buckets), _end(end) {
-
-        };
+        Iterator(Container::Iterator* iter): _iter(iter) {};
         ~Iterator() override {
-            delete _iterator;
+            delete _iter;
         }
-        List2** getCurrBucket() {
-            return _curr_buckets;
-        }
-        List2::ListIterator* getCurrBucketIterator() {
-            return _iterator;
-        }
+        Container::Iterator* getTableIterator() const { return _iter; }
         void* getElement(size_t &size) override;
         bool hasNext() override;
         void goToNext() override;
         bool equals(Container::Iterator *right) override;
     };
     Set(MemoryManager& mem) : AbstractSet(mem) {
-        _table = new Table(mem);
+        _table = new Table(mem, 100003);
     };
-    ~Set() {
+    ~Set() override {
         delete _table;
     }
 
