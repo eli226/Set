@@ -9,6 +9,7 @@ int main() {
     SetTests tests(mem);
     tests.test_insert();
     tests.test_find();
+    tests.test_remove();
 
     return 0;
 }
