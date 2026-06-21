@@ -120,12 +120,10 @@ bool List::Iterator_list::hasNext()
 
 void List::Iterator_list::goToNext()
 {
-	if (hasNext())
-	{
+	if (hasNext()) {
 		prev = curr;
 		curr = curr->next;
 	}
-	
 }
 
 bool List::Iterator_list::equals(Iterator* right)

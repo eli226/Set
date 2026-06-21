@@ -33,7 +33,6 @@ public:
          bool equals(Iterator* right) override;
          node* curr;
          node* prev;
-    
     };
     int size() override;
     size_t max_bytes() override;
