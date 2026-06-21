@@ -111,5 +111,8 @@ void SetTests::test_find() {
     if (count == 5) {
         cout << "the find is working properly" << endl;
     }
-    cout << "\n" << endl;
+    else {
+        cout << "something went wrong" << endl;
+    }
+    cout << "\n";
 }

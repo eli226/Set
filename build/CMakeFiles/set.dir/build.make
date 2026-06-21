@@ -100,19 +100,19 @@ CMakeFiles/set.dir/src/containers/Set.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/src/containers/Set.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/src/containers/Set.cpp -o CMakeFiles/set.dir/src/containers/Set.cpp.s
 
-CMakeFiles/set.dir/src/containers/List2.cpp.o: CMakeFiles/set.dir/flags.make
-CMakeFiles/set.dir/src/containers/List2.cpp.o: /Users/eldar/CLionProjects/practirim/set/src/containers/List2.cpp
-CMakeFiles/set.dir/src/containers/List2.cpp.o: CMakeFiles/set.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/set.dir/src/containers/List2.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set.dir/src/containers/List2.cpp.o -MF CMakeFiles/set.dir/src/containers/List2.cpp.o.d -o CMakeFiles/set.dir/src/containers/List2.cpp.o -c /Users/eldar/CLionProjects/practirim/set/src/containers/List2.cpp
+CMakeFiles/set.dir/src/containers/List.cpp.o: CMakeFiles/set.dir/flags.make
+CMakeFiles/set.dir/src/containers/List.cpp.o: /Users/eldar/CLionProjects/practirim/set/src/containers/List.cpp
+CMakeFiles/set.dir/src/containers/List.cpp.o: CMakeFiles/set.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/set.dir/src/containers/List.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set.dir/src/containers/List.cpp.o -MF CMakeFiles/set.dir/src/containers/List.cpp.o.d -o CMakeFiles/set.dir/src/containers/List.cpp.o -c /Users/eldar/CLionProjects/practirim/set/src/containers/List.cpp
 
-CMakeFiles/set.dir/src/containers/List2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/set.dir/src/containers/List2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/eldar/CLionProjects/practirim/set/src/containers/List2.cpp > CMakeFiles/set.dir/src/containers/List2.cpp.i
+CMakeFiles/set.dir/src/containers/List.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/set.dir/src/containers/List.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/eldar/CLionProjects/practirim/set/src/containers/List.cpp > CMakeFiles/set.dir/src/containers/List.cpp.i
 
-CMakeFiles/set.dir/src/containers/List2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/src/containers/List2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/src/containers/List2.cpp -o CMakeFiles/set.dir/src/containers/List2.cpp.s
+CMakeFiles/set.dir/src/containers/List.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/src/containers/List.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/src/containers/List.cpp -o CMakeFiles/set.dir/src/containers/List.cpp.s
 
 CMakeFiles/set.dir/src/containers/Table.cpp.o: CMakeFiles/set.dir/flags.make
 CMakeFiles/set.dir/src/containers/Table.cpp.o: /Users/eldar/CLionProjects/practirim/set/src/containers/Table.cpp
@@ -128,39 +128,103 @@ CMakeFiles/set.dir/src/containers/Table.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/src/containers/Table.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/src/containers/Table.cpp -o CMakeFiles/set.dir/src/containers/Table.cpp.s
 
-CMakeFiles/set.dir/src/containers/Container.cpp.o: CMakeFiles/set.dir/flags.make
-CMakeFiles/set.dir/src/containers/Container.cpp.o: /Users/eldar/CLionProjects/practirim/set/src/containers/Container.cpp
-CMakeFiles/set.dir/src/containers/Container.cpp.o: CMakeFiles/set.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/set.dir/src/containers/Container.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set.dir/src/containers/Container.cpp.o -MF CMakeFiles/set.dir/src/containers/Container.cpp.o.d -o CMakeFiles/set.dir/src/containers/Container.cpp.o -c /Users/eldar/CLionProjects/practirim/set/src/containers/Container.cpp
+CMakeFiles/set.dir/tests/test_insert.cpp.o: CMakeFiles/set.dir/flags.make
+CMakeFiles/set.dir/tests/test_insert.cpp.o: /Users/eldar/CLionProjects/practirim/set/tests/test_insert.cpp
+CMakeFiles/set.dir/tests/test_insert.cpp.o: CMakeFiles/set.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/set.dir/tests/test_insert.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set.dir/tests/test_insert.cpp.o -MF CMakeFiles/set.dir/tests/test_insert.cpp.o.d -o CMakeFiles/set.dir/tests/test_insert.cpp.o -c /Users/eldar/CLionProjects/practirim/set/tests/test_insert.cpp
 
-CMakeFiles/set.dir/src/containers/Container.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/set.dir/src/containers/Container.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/eldar/CLionProjects/practirim/set/src/containers/Container.cpp > CMakeFiles/set.dir/src/containers/Container.cpp.i
+CMakeFiles/set.dir/tests/test_insert.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/set.dir/tests/test_insert.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/eldar/CLionProjects/practirim/set/tests/test_insert.cpp > CMakeFiles/set.dir/tests/test_insert.cpp.i
 
-CMakeFiles/set.dir/src/containers/Container.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/src/containers/Container.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/src/containers/Container.cpp -o CMakeFiles/set.dir/src/containers/Container.cpp.s
+CMakeFiles/set.dir/tests/test_insert.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/tests/test_insert.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/tests/test_insert.cpp -o CMakeFiles/set.dir/tests/test_insert.cpp.s
+
+CMakeFiles/set.dir/tests/test_find.cpp.o: CMakeFiles/set.dir/flags.make
+CMakeFiles/set.dir/tests/test_find.cpp.o: /Users/eldar/CLionProjects/practirim/set/tests/test_find.cpp
+CMakeFiles/set.dir/tests/test_find.cpp.o: CMakeFiles/set.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/set.dir/tests/test_find.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set.dir/tests/test_find.cpp.o -MF CMakeFiles/set.dir/tests/test_find.cpp.o.d -o CMakeFiles/set.dir/tests/test_find.cpp.o -c /Users/eldar/CLionProjects/practirim/set/tests/test_find.cpp
+
+CMakeFiles/set.dir/tests/test_find.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/set.dir/tests/test_find.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/eldar/CLionProjects/practirim/set/tests/test_find.cpp > CMakeFiles/set.dir/tests/test_find.cpp.i
+
+CMakeFiles/set.dir/tests/test_find.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/tests/test_find.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/tests/test_find.cpp -o CMakeFiles/set.dir/tests/test_find.cpp.s
+
+CMakeFiles/set.dir/tests/test_remove.cpp.o: CMakeFiles/set.dir/flags.make
+CMakeFiles/set.dir/tests/test_remove.cpp.o: /Users/eldar/CLionProjects/practirim/set/tests/test_remove.cpp
+CMakeFiles/set.dir/tests/test_remove.cpp.o: CMakeFiles/set.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/set.dir/tests/test_remove.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set.dir/tests/test_remove.cpp.o -MF CMakeFiles/set.dir/tests/test_remove.cpp.o.d -o CMakeFiles/set.dir/tests/test_remove.cpp.o -c /Users/eldar/CLionProjects/practirim/set/tests/test_remove.cpp
+
+CMakeFiles/set.dir/tests/test_remove.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/set.dir/tests/test_remove.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/eldar/CLionProjects/practirim/set/tests/test_remove.cpp > CMakeFiles/set.dir/tests/test_remove.cpp.i
+
+CMakeFiles/set.dir/tests/test_remove.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/tests/test_remove.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/tests/test_remove.cpp -o CMakeFiles/set.dir/tests/test_remove.cpp.s
+
+CMakeFiles/set.dir/tests/test_empty.cpp.o: CMakeFiles/set.dir/flags.make
+CMakeFiles/set.dir/tests/test_empty.cpp.o: /Users/eldar/CLionProjects/practirim/set/tests/test_empty.cpp
+CMakeFiles/set.dir/tests/test_empty.cpp.o: CMakeFiles/set.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/set.dir/tests/test_empty.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set.dir/tests/test_empty.cpp.o -MF CMakeFiles/set.dir/tests/test_empty.cpp.o.d -o CMakeFiles/set.dir/tests/test_empty.cpp.o -c /Users/eldar/CLionProjects/practirim/set/tests/test_empty.cpp
+
+CMakeFiles/set.dir/tests/test_empty.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/set.dir/tests/test_empty.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/eldar/CLionProjects/practirim/set/tests/test_empty.cpp > CMakeFiles/set.dir/tests/test_empty.cpp.i
+
+CMakeFiles/set.dir/tests/test_empty.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/tests/test_empty.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/tests/test_empty.cpp -o CMakeFiles/set.dir/tests/test_empty.cpp.s
+
+CMakeFiles/set.dir/tests/test_iterator.cpp.o: CMakeFiles/set.dir/flags.make
+CMakeFiles/set.dir/tests/test_iterator.cpp.o: /Users/eldar/CLionProjects/practirim/set/tests/test_iterator.cpp
+CMakeFiles/set.dir/tests/test_iterator.cpp.o: CMakeFiles/set.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/set.dir/tests/test_iterator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set.dir/tests/test_iterator.cpp.o -MF CMakeFiles/set.dir/tests/test_iterator.cpp.o.d -o CMakeFiles/set.dir/tests/test_iterator.cpp.o -c /Users/eldar/CLionProjects/practirim/set/tests/test_iterator.cpp
+
+CMakeFiles/set.dir/tests/test_iterator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/set.dir/tests/test_iterator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/eldar/CLionProjects/practirim/set/tests/test_iterator.cpp > CMakeFiles/set.dir/tests/test_iterator.cpp.i
+
+CMakeFiles/set.dir/tests/test_iterator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/set.dir/tests/test_iterator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/eldar/CLionProjects/practirim/set/tests/test_iterator.cpp -o CMakeFiles/set.dir/tests/test_iterator.cpp.s
 
 # Object files for target set
 set_OBJECTS = \
 "CMakeFiles/set.dir/src/main/main.cpp.o" \
 "CMakeFiles/set.dir/src/containers/Set.cpp.o" \
-"CMakeFiles/set.dir/src/containers/List2.cpp.o" \
+"CMakeFiles/set.dir/src/containers/List.cpp.o" \
 "CMakeFiles/set.dir/src/containers/Table.cpp.o" \
-"CMakeFiles/set.dir/src/containers/Container.cpp.o"
+"CMakeFiles/set.dir/tests/test_insert.cpp.o" \
+"CMakeFiles/set.dir/tests/test_find.cpp.o" \
+"CMakeFiles/set.dir/tests/test_remove.cpp.o" \
+"CMakeFiles/set.dir/tests/test_empty.cpp.o" \
+"CMakeFiles/set.dir/tests/test_iterator.cpp.o"
 
 # External object files for target set
 set_EXTERNAL_OBJECTS =
 
 set: CMakeFiles/set.dir/src/main/main.cpp.o
 set: CMakeFiles/set.dir/src/containers/Set.cpp.o
-set: CMakeFiles/set.dir/src/containers/List2.cpp.o
+set: CMakeFiles/set.dir/src/containers/List.cpp.o
 set: CMakeFiles/set.dir/src/containers/Table.cpp.o
-set: CMakeFiles/set.dir/src/containers/Container.cpp.o
+set: CMakeFiles/set.dir/tests/test_insert.cpp.o
+set: CMakeFiles/set.dir/tests/test_find.cpp.o
+set: CMakeFiles/set.dir/tests/test_remove.cpp.o
+set: CMakeFiles/set.dir/tests/test_empty.cpp.o
+set: CMakeFiles/set.dir/tests/test_iterator.cpp.o
 set: CMakeFiles/set.dir/build.make
 set: CMakeFiles/set.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable set"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/eldar/CLionProjects/practirim/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable set"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/set.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

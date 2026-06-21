@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/eldar/CLionProjects/practirim/set/include
 
-CXX_FLAGSarm64 = -fsanitize=address -g -std=gnu++20 -arch arm64
+CXX_FLAGSarm64 = -std=gnu++20 -arch arm64
 
-CXX_FLAGS = -fsanitize=address -g -std=gnu++20 -arch arm64
+CXX_FLAGS = -std=gnu++20 -arch arm64
 

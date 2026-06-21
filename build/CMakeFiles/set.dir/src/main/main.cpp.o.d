@@ -1,5 +1,4 @@
 CMakeFiles/set.dir/src/main/main.cpp.o: \
-  /Library/Developer/CommandLineTools/usr/lib/clang/17/share/asan_ignorelist.txt \
   /Users/eldar/CLionProjects/practirim/set/src/main/main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
@@ -945,7 +944,10 @@ CMakeFiles/set.dir/src/main/main.cpp.o: \
   /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/../BaseClasses/Container.h \
   /Users/eldar/CLionProjects/practirim/set/include/BaseClasses/GroupList.h \
   /Users/eldar/CLionProjects/practirim/set/src/main/../../include/Containers/Table.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/ListAbstract.h \
   /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/TableAbstract.h \
   /Users/eldar/CLionProjects/practirim/set/src/main/../../include/Containers/UsedBuck.h \
   /Users/eldar/CLionProjects/practirim/set/include/MM/Mem.h \
-  /Users/eldar/CLionProjects/practirim/set/include/MM/MemoryManager.h
+  /Users/eldar/CLionProjects/practirim/set/include/MM/MemoryManager.h \
+  /Users/eldar/CLionProjects/practirim/set/include/../tests/SetTests.h \
+  /Users/eldar/CLionProjects/practirim/set/include/Containers/Set.h

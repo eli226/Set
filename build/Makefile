@@ -136,53 +136,29 @@ set/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/build
 .PHONY : set/fast
 
-src/containers/Container.o: src/containers/Container.cpp.o
-.PHONY : src/containers/Container.o
+src/containers/List.o: src/containers/List.cpp.o
+.PHONY : src/containers/List.o
 
 # target to build an object file
-src/containers/Container.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/containers/Container.cpp.o
-.PHONY : src/containers/Container.cpp.o
+src/containers/List.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/containers/List.cpp.o
+.PHONY : src/containers/List.cpp.o
 
-src/containers/Container.i: src/containers/Container.cpp.i
-.PHONY : src/containers/Container.i
-
-# target to preprocess a source file
-src/containers/Container.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/containers/Container.cpp.i
-.PHONY : src/containers/Container.cpp.i
-
-src/containers/Container.s: src/containers/Container.cpp.s
-.PHONY : src/containers/Container.s
-
-# target to generate assembly for a file
-src/containers/Container.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/containers/Container.cpp.s
-.PHONY : src/containers/Container.cpp.s
-
-src/containers/List2.o: src/containers/List2.cpp.o
-.PHONY : src/containers/List2.o
-
-# target to build an object file
-src/containers/List2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/containers/List2.cpp.o
-.PHONY : src/containers/List2.cpp.o
-
-src/containers/List2.i: src/containers/List2.cpp.i
-.PHONY : src/containers/List2.i
+src/containers/List.i: src/containers/List.cpp.i
+.PHONY : src/containers/List.i
 
 # target to preprocess a source file
-src/containers/List2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/containers/List2.cpp.i
-.PHONY : src/containers/List2.cpp.i
+src/containers/List.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/containers/List.cpp.i
+.PHONY : src/containers/List.cpp.i
 
-src/containers/List2.s: src/containers/List2.cpp.s
-.PHONY : src/containers/List2.s
+src/containers/List.s: src/containers/List.cpp.s
+.PHONY : src/containers/List.s
 
 # target to generate assembly for a file
-src/containers/List2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/containers/List2.cpp.s
-.PHONY : src/containers/List2.cpp.s
+src/containers/List.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/containers/List.cpp.s
+.PHONY : src/containers/List.cpp.s
 
 src/containers/Set.o: src/containers/Set.cpp.o
 .PHONY : src/containers/Set.o
@@ -256,6 +232,126 @@ src/main/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/src/main/main.cpp.s
 .PHONY : src/main/main.cpp.s
 
+tests/test_empty.o: tests/test_empty.cpp.o
+.PHONY : tests/test_empty.o
+
+# target to build an object file
+tests/test_empty.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_empty.cpp.o
+.PHONY : tests/test_empty.cpp.o
+
+tests/test_empty.i: tests/test_empty.cpp.i
+.PHONY : tests/test_empty.i
+
+# target to preprocess a source file
+tests/test_empty.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_empty.cpp.i
+.PHONY : tests/test_empty.cpp.i
+
+tests/test_empty.s: tests/test_empty.cpp.s
+.PHONY : tests/test_empty.s
+
+# target to generate assembly for a file
+tests/test_empty.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_empty.cpp.s
+.PHONY : tests/test_empty.cpp.s
+
+tests/test_find.o: tests/test_find.cpp.o
+.PHONY : tests/test_find.o
+
+# target to build an object file
+tests/test_find.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_find.cpp.o
+.PHONY : tests/test_find.cpp.o
+
+tests/test_find.i: tests/test_find.cpp.i
+.PHONY : tests/test_find.i
+
+# target to preprocess a source file
+tests/test_find.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_find.cpp.i
+.PHONY : tests/test_find.cpp.i
+
+tests/test_find.s: tests/test_find.cpp.s
+.PHONY : tests/test_find.s
+
+# target to generate assembly for a file
+tests/test_find.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_find.cpp.s
+.PHONY : tests/test_find.cpp.s
+
+tests/test_insert.o: tests/test_insert.cpp.o
+.PHONY : tests/test_insert.o
+
+# target to build an object file
+tests/test_insert.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_insert.cpp.o
+.PHONY : tests/test_insert.cpp.o
+
+tests/test_insert.i: tests/test_insert.cpp.i
+.PHONY : tests/test_insert.i
+
+# target to preprocess a source file
+tests/test_insert.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_insert.cpp.i
+.PHONY : tests/test_insert.cpp.i
+
+tests/test_insert.s: tests/test_insert.cpp.s
+.PHONY : tests/test_insert.s
+
+# target to generate assembly for a file
+tests/test_insert.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_insert.cpp.s
+.PHONY : tests/test_insert.cpp.s
+
+tests/test_iterator.o: tests/test_iterator.cpp.o
+.PHONY : tests/test_iterator.o
+
+# target to build an object file
+tests/test_iterator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_iterator.cpp.o
+.PHONY : tests/test_iterator.cpp.o
+
+tests/test_iterator.i: tests/test_iterator.cpp.i
+.PHONY : tests/test_iterator.i
+
+# target to preprocess a source file
+tests/test_iterator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_iterator.cpp.i
+.PHONY : tests/test_iterator.cpp.i
+
+tests/test_iterator.s: tests/test_iterator.cpp.s
+.PHONY : tests/test_iterator.s
+
+# target to generate assembly for a file
+tests/test_iterator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_iterator.cpp.s
+.PHONY : tests/test_iterator.cpp.s
+
+tests/test_remove.o: tests/test_remove.cpp.o
+.PHONY : tests/test_remove.o
+
+# target to build an object file
+tests/test_remove.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_remove.cpp.o
+.PHONY : tests/test_remove.cpp.o
+
+tests/test_remove.i: tests/test_remove.cpp.i
+.PHONY : tests/test_remove.i
+
+# target to preprocess a source file
+tests/test_remove.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_remove.cpp.i
+.PHONY : tests/test_remove.cpp.i
+
+tests/test_remove.s: tests/test_remove.cpp.s
+.PHONY : tests/test_remove.s
+
+# target to generate assembly for a file
+tests/test_remove.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/tests/test_remove.cpp.s
+.PHONY : tests/test_remove.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -266,12 +362,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... set"
-	@echo "... src/containers/Container.o"
-	@echo "... src/containers/Container.i"
-	@echo "... src/containers/Container.s"
-	@echo "... src/containers/List2.o"
-	@echo "... src/containers/List2.i"
-	@echo "... src/containers/List2.s"
+	@echo "... src/containers/List.o"
+	@echo "... src/containers/List.i"
+	@echo "... src/containers/List.s"
 	@echo "... src/containers/Set.o"
 	@echo "... src/containers/Set.i"
 	@echo "... src/containers/Set.s"
@@ -281,6 +374,21 @@ help:
 	@echo "... src/main/main.o"
 	@echo "... src/main/main.i"
 	@echo "... src/main/main.s"
+	@echo "... tests/test_empty.o"
+	@echo "... tests/test_empty.i"
+	@echo "... tests/test_empty.s"
+	@echo "... tests/test_find.o"
+	@echo "... tests/test_find.i"
+	@echo "... tests/test_find.s"
+	@echo "... tests/test_insert.o"
+	@echo "... tests/test_insert.i"
+	@echo "... tests/test_insert.s"
+	@echo "... tests/test_iterator.o"
+	@echo "... tests/test_iterator.i"
+	@echo "... tests/test_iterator.s"
+	@echo "... tests/test_remove.o"
+	@echo "... tests/test_remove.i"
+	@echo "... tests/test_remove.s"
 .PHONY : help
 
 

@@ -37,6 +37,7 @@ static bool test_insert_duplicate(Set* set) {
     if (set->insert(&a, sizeof(int)) != -1) return false;
     return true;
 }
+
 void SetTests::test_insert() {
     int count = 0;
     if (test_insert_small_sequence(set) == true) {
@@ -70,5 +71,8 @@ void SetTests::test_insert() {
     if (count == 4) {
         cout << "the insert is working properly" << endl;
     }
-    cout << "\n" << endl;
+    else {
+        cout << "something went wrong" << endl;
+    }
+    cout << "\n";
 }
