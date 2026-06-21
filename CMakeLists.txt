@@ -6,12 +6,17 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(set src/main/main.cpp
         include/Containers/Set.h
         src/containers/Set.cpp
-        include/Containers/List2.h
-        src/containers/List2.cpp
+        include/Containers/List.h
+        src/containers/List.cpp
         include/Containers/Table.h
         src/containers/Table.cpp
-        src/containers/Container.cpp
         include/Containers/UsedBuck.h
+        tests/SetTests.h
+        tests/test_insert.cpp
+        tests/test_find.cpp
+        tests/test_remove.cpp
+        tests/test_empty.cpp
+        tests/test_iterator.cpp
 )
 
 target_include_directories(set PRIVATE

@@ -1,6 +1,9 @@
-CMakeFiles/set.dir/src/containers/Container.cpp.o: \
-  /Library/Developer/CommandLineTools/usr/lib/clang/17/share/asan_ignorelist.txt \
-  /Users/eldar/CLionProjects/practirim/set/src/containers/Container.cpp \
+CMakeFiles/set.dir/tests/test_insert.cpp.o: \
+  /Users/eldar/CLionProjects/practirim/set/tests/test_insert.cpp \
+  /Users/eldar/CLionProjects/practirim/set/tests/SetTests.h \
+  /Users/eldar/CLionProjects/practirim/set/include/Containers/Set.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/SetAbstract.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/../BaseClasses/GroupContainer.h \
   /Users/eldar/CLionProjects/practirim/set/include/BaseClasses/Container.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
@@ -934,4 +937,16 @@ CMakeFiles/set.dir/src/containers/Container.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
-  /Users/eldar/CLionProjects/practirim/set/include/BaseClasses/../MM/MemoryManager.h
+  /Users/eldar/CLionProjects/practirim/set/include/BaseClasses/../MM/MemoryManager.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/../MM/MemoryManager.h \
+  /Users/eldar/CLionProjects/practirim/set/include/Containers/List2.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/List2Abstract.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/../BaseClasses/GroupList.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/../BaseClasses/Container.h \
+  /Users/eldar/CLionProjects/practirim/set/include/BaseClasses/GroupList.h \
+  /Users/eldar/CLionProjects/practirim/set/include/Containers/Table.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/ListAbstract.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/TableAbstract.h \
+  /Users/eldar/CLionProjects/practirim/set/include/Containers/UsedBuck.h \
+  /Users/eldar/CLionProjects/practirim/set/include/MM/Mem.h \
+  /Users/eldar/CLionProjects/practirim/set/include/MM/MemoryManager.h

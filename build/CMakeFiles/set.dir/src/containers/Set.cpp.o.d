@@ -1,5 +1,4 @@
 CMakeFiles/set.dir/src/containers/Set.cpp.o: \
-  /Library/Developer/CommandLineTools/usr/lib/clang/17/share/asan_ignorelist.txt \
   /Users/eldar/CLionProjects/practirim/set/src/containers/Set.cpp \
   /Users/eldar/CLionProjects/practirim/set/src/containers/../../include/Containers/Set.h \
   /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/SetAbstract.h \
@@ -945,6 +944,7 @@ CMakeFiles/set.dir/src/containers/Set.cpp.o: \
   /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/../BaseClasses/Container.h \
   /Users/eldar/CLionProjects/practirim/set/include/BaseClasses/GroupList.h \
   /Users/eldar/CLionProjects/practirim/set/src/containers/../../include/Containers/Table.h \
+  /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/ListAbstract.h \
   /Users/eldar/CLionProjects/practirim/set/include/AbstractClasses/TableAbstract.h \
   /Users/eldar/CLionProjects/practirim/set/src/containers/../../include/Containers/UsedBuck.h \
   /Users/eldar/CLionProjects/practirim/set/include/MM/Mem.h \
