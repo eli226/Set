@@ -23,7 +23,7 @@ AbstractSet::Iterator* Set::find(void* elem, size_t size) {
     else
         return nullptr;
 }
-AbstractSet::Iterator* Set::newIterator() { // работает исправно
+AbstractSet::Iterator* Set::newIterator() {
     Container::Iterator* curr = _table->newIterator();
     if (curr != nullptr) {
         return new Set::Iterator(curr);
@@ -41,15 +41,15 @@ void Set::remove(Container::Iterator* iter) {
     if (it == nullptr) return;
     _table->remove(it->getTableIterator());
 }
-int Set::size() { //не тестировал
+int Set::size() {
     return _table->size();
 }
-size_t Set::max_bytes() { // не тестировал
+size_t Set::max_bytes() {
     return  _table->max_bytes();
 }
-void Set::clear() { // не тестировал
+void Set::clear() {
     _table->clear();
 }
-bool Set::empty() { // не тестировал
+bool Set::empty() {
     return _table->empty();
 }

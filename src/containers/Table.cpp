@@ -312,7 +312,7 @@ Container::Iterator* Table::newIterator()
         if (!_buckets[b]->empty())
             return new TableIterator(this, b, _buckets[b]->newIterator());
 
-    return 0;
+    return nullptr;
 }
 
 void Table::remove(Iterator* iter)
