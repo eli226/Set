@@ -14,7 +14,8 @@ public:
 
     void freeMem(void* ptr)
     {
-        delete[] ptr;
+        char* newPtr = static_cast<char*>(ptr);
+        delete[] newPtr;
     }
     size_t maxBytes() { return 0; }
 };
