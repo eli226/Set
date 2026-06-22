@@ -3,13 +3,16 @@ project(set)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(set src/main/main.cpp
+add_executable(set
+        src/main/main.cpp
         include/Containers/Set.h
         src/containers/Set.cpp
         include/Containers/List.h
         src/containers/List.cpp
         include/Containers/Table.h
         src/containers/Table.cpp
+        include/BaseClasses/GroupList.h
+        src/containers/GroupList.cpp
         include/Containers/UsedBuck.h
         tests/SetTests.h
         tests/test_insert.cpp
