@@ -1,10 +1,9 @@
 #pragma once
-#include "AbstractClasses/List2Abstract.h"
-#include "BaseClasses/GroupList.h"
+#include "List2Abstract.h"
+#include "GroupList.h"
 
-class List2 final : public AbstractList2
+class List2 : public AbstractList2
 {
-    friend class Set;
 private:
     typedef struct Node
     {
@@ -16,9 +15,6 @@ private:
 
     Node *_head;
     Node *_tail;
-    size_t _size;
-    size_t _global_size;
-    int _elem_quantity;
 
 public:
     List2(MemoryManager &mem) : AbstractList2(mem)
@@ -52,10 +48,6 @@ public:
 
     // Container
 
-    int size() override;
-
-    size_t max_bytes() override;
-
     Iterator *find(void *elem, size_t size) override;
 
     Iterator *newIterator() override;
@@ -63,8 +55,6 @@ public:
     void remove(Iterator *iter) override;
 
     void clear() override;
-
-    bool empty() override;
 
     class ListIterator : public Iterator
     {
@@ -83,12 +73,17 @@ public:
         {
             current = node;
         }
+
+        Node *get_previous(Node *node)
+        {
+            return current->previous;
+        }
         
         void *getElement(size_t &size) override;
         bool hasNext() override;
         void goToNext() override;
         bool equals(Iterator *right) override;
-
     };
+
     friend class ListIterator;
 };
