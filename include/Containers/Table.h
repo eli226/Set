@@ -2,6 +2,7 @@
 
 #include "AbstractClasses/ListAbstract.h"
 #include "AbstractClasses/TableAbstract.h"
+#include "Containers/UsedBuck.h"
 
 struct KV
 {
@@ -51,6 +52,8 @@ private:
     size_t _bucketCount;
     size_t _size;
     BucketFactory _factory;
+
+    UsedBuck _usedBuckets;
 
     size_t bucketIndex(void* key, size_t keySize);
     Iterator* findRawByKey(size_t bucket, void* key, size_t keySize);

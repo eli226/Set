@@ -17,6 +17,8 @@ add_executable(Table_Thread
         src/containers/List.cpp
         src/containers/Table.cpp
         src/main/TableTestMain.cpp
+        include/Containers/UsedBuck.h
+        src/containers/Table.cpp
 )
 
 target_include_directories(Table_Thread PRIVATE include)

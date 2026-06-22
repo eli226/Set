@@ -50,18 +50,10 @@ public:
 
     bool hasNext() override
     {
-        size_t i;
-
         if (inner != 0 && inner->hasNext())
             return 1;
 
-        for (i = bucket + 1; i < table->_bucketCount; i++)
-        {
-            if (table->_buckets[i]->empty() == 0)
-                return 1;
-        }
-
-        return 0;
+        return table->_usedBuckets.hasAfter(bucket);
     }
 
     void goToNext() override
@@ -242,17 +234,15 @@ void Table::moveIteratorToNextBucket(TableIterator* it)
     delete it->inner;
     it->inner = 0;
 
-    for (b = it->bucket + 1; b < _bucketCount; b++)
+    b = it->table->_usedBuckets.nextAfter(it->bucket);
+    if (b == (size_t)-1 || b >= _bucketCount)
     {
-        if (_buckets[b]->empty() == 0)
-        {
-            it->bucket = b;
-            it->inner = _buckets[b]->newIterator();
-            return;
-        }
+        it->bucket = _bucketCount;
+        return;
     }
 
-    it->bucket = _bucketCount;
+    it->bucket = b;
+    it->inner = _buckets[b]->newIterator();
 }
 
 int Table::insertByKey(void* key, size_t keySize, void* elem, size_t elemSize)
@@ -261,6 +251,7 @@ int Table::insertByKey(void* key, size_t keySize, void* elem, size_t elemSize)
     Iterator* found;
     char* item;
     int result;
+    bool wasEmpty;
 
     if ((keySize && !key) || (elemSize && !elem))
         return 1;
@@ -277,11 +268,16 @@ int Table::insertByKey(void* key, size_t keySize, void* elem, size_t elemSize)
     if (item == 0)
         return 1;
 
+    wasEmpty = _buckets[bucket]->empty();
+
     result = _buckets[bucket]->push_front(item, HEADER_SIZE + keySize + elemSize);
     _memory.freeMem(item);
 
     if (result != 0)
         return 1;
+
+    if (wasEmpty)
+        _usedBuckets.newNode(_buckets[bucket], bucket);
 
     _size++;
     return 0;
@@ -299,6 +295,10 @@ void Table::removeByKey(void* key, size_t keySize)
         return;
 
     _buckets[bucket]->remove(it);
+
+    if (_buckets[bucket]->empty())
+        _usedBuckets.remove(_buckets[bucket]);
+
     delete it;
     _size--;
 }
@@ -385,13 +385,11 @@ Container::Iterator* Table::newIterator()
 {
     size_t b;
 
-    for (b = 0; b < _bucketCount; b++)
-    {
-        if (_buckets[b]->empty() == 0)
-            return new TableIterator(this, b, _buckets[b]->newIterator());
-    }
+    b = _usedBuckets.firstIndex();
+    if (b == (size_t)-1 || b >= _bucketCount)
+        return 0;
 
-    return 0;
+    return new TableIterator(this, b, _buckets[b]->newIterator());
 }
 
 void Table::remove(Iterator* iter)
@@ -423,6 +421,7 @@ void Table::clear()
         _buckets[i]->clear();
     }
 
+    _usedBuckets.clear();
     _size = 0;
 }
 
