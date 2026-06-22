@@ -18,9 +18,9 @@ struct KV_str
 class Table : public AbstractTable
 {
 public:
-    using BucketFactory = AbstractList* (*)(MemoryManager&);
+    typedef AbstractList* (*BucketFactory)(MemoryManager&);
 
-    explicit Table(MemoryManager& mem, size_t bucketCount = 17, BucketFactory factory = 0);
+    Table(MemoryManager& mem, size_t bucketCount = 17, BucketFactory factory = 0);
     ~Table() override;
 
     int insertByKey(void* key, size_t keySize, void* elem, size_t elemSize) override;
@@ -36,6 +36,7 @@ public:
     void clear() override;
     bool empty() override;
 
+    // Дополнительные функции работы с конкретными типами данных.
     int insert_by_key(KV* elem, size_t elemSize);
     int insert_string(KV_str* elem, size_t elemSize);
     void print();
@@ -51,13 +52,14 @@ private:
     size_t _size;
     BucketFactory _factory;
 
-    size_t bucketIndex(void* key, size_t keySize) const;
+    size_t bucketIndex(void* key, size_t keySize);
     Iterator* findRawByKey(size_t bucket, void* key, size_t keySize);
     void moveIteratorToNextBucket(TableIterator* it);
 
+    // Вспомогательные фукнции.
     static void writeSize(void* ptr, size_t value);
     static size_t readSize(void* ptr);
-    static char* makeItem(void* key, size_t keySize, void* elem, size_t elemSize);
+    char* makeItem(void* key, size_t keySize, void* elem, size_t elemSize);
     static size_t itemKeySize(void* item);
     static size_t itemValueSize(void* item);
     static void* itemKey(void* item);
