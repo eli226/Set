@@ -1,5 +1,5 @@
 #include <iostream>
-#include "GroupList.h"
+#include "../include/BaseClasses/GroupList.h"
 
 int GroupList::size()
 {

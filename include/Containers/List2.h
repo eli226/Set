@@ -1,6 +1,6 @@
 #pragma once
-#include "List2Abstract.h"
-#include "GroupList.h"
+#include "AbstractClasses/List2Abstract.h"
+#include "BaseClasses/GroupList.h"
 
 class List2 : public AbstractList2
 {
