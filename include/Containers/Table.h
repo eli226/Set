@@ -42,19 +42,30 @@ public:
     void print();
     void print_string();
 
+    size_t bucketCount() const { return _bucketCount; }
+
 private:
     class TableIterator;
 
     static const size_t HEADER_SIZE = sizeof(size_t) * 2;
+    static const size_t MAX_LOAD_NUM = 3;
+    static const size_t MAX_LOAD_DEN = 4;
 
     AbstractList** _buckets;
     size_t _bucketCount;
     size_t _size;
     BucketFactory _factory;
 
-    size_t bucketIndex(void* key, size_t keySize);
+    size_t bucketIndex(void* key, size_t keySize) const;
     Iterator* findRawByKey(size_t bucket, void* key, size_t keySize);
     void moveIteratorToNextBucket(TableIterator* it);
+
+    bool needsRehash() const;
+    int rehash();
+    static size_t hashKey(void* key, size_t keySize);
+    static bool isPrime(size_t n);
+    static size_t nextPrime(size_t n);
+    static size_t nextBucketCount(size_t current);
 
     // Вспомогательные фукнции.
     static void writeSize(void* ptr, size_t value);

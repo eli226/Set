@@ -186,7 +186,7 @@ void* Table::itemValue(void* item)
     return (char*)item + HEADER_SIZE + itemKeySize(item);
 }
 
-size_t Table::bucketIndex(void* key, size_t keySize)
+size_t Table::hashKey(void* key, size_t keySize)
 {
     unsigned char* p;
     size_t h;
@@ -196,11 +196,134 @@ size_t Table::bucketIndex(void* key, size_t keySize)
     h = 0;
 
     for (i = 0; i < keySize; i++)
-    {
         h = h * 131 + p[i];
+
+    return h;
+}
+
+bool Table::isPrime(size_t n)
+{
+    size_t d;
+
+    if (n < 2)
+        return 0;
+
+    if (n == 2)
+        return 1;
+
+    if (n % 2 == 0)
+        return 0;
+
+    for (d = 3; d * d <= n; d += 2)
+    {
+        if (n % d == 0)
+            return 0;
     }
 
-    return h % _bucketCount;
+    return 1;
+}
+
+size_t Table::nextPrime(size_t n)
+{
+    while (isPrime(n) == 0)
+        n++;
+
+    return n;
+}
+
+size_t Table::nextBucketCount(size_t current)
+{
+    size_t target;
+
+    target = current * 2;
+    if (target <= current)
+        target = current + 1;
+
+    return nextPrime(target);
+}
+
+bool Table::needsRehash() const
+{
+    return _size * MAX_LOAD_DEN > _bucketCount * MAX_LOAD_NUM;
+}
+
+int Table::rehash()
+{
+    AbstractList** oldBuckets;
+    size_t oldCount;
+    size_t newCount;
+    AbstractList** newBuckets;
+    size_t b;
+    size_t i;
+    Iterator* it;
+    size_t itemSize;
+    void* item;
+    size_t newBucket;
+
+    oldBuckets = _buckets;
+    oldCount = _bucketCount;
+    newCount = nextBucketCount(oldCount);
+
+    if (newCount <= oldCount)
+        return 0;
+
+    newBuckets = (AbstractList**)_memory.allocMem(sizeof(AbstractList*) * newCount);
+    if (newBuckets == 0)
+        return 1;
+
+    for (i = 0; i < newCount; i++)
+    {
+        newBuckets[i] = _factory(_memory);
+        if (newBuckets[i] == 0)
+        {
+            for (b = 0; b < i; b++)
+                delete newBuckets[b];
+
+            _memory.freeMem(newBuckets);
+            return 1;
+        }
+    }
+
+    _buckets = newBuckets;
+    _bucketCount = newCount;
+
+    for (b = 0; b < oldCount; b++)
+    {
+        it = oldBuckets[b]->newIterator();
+        while (it)
+        {
+            itemSize = 0;
+            item = it->getElement(itemSize);
+            if (item == 0)
+                break;
+
+            newBucket = bucketIndex(itemKey(item), itemKeySize(item));
+            if (_buckets[newBucket]->push_front(item, itemSize) != 0)
+            {
+                delete it;
+                return 1;
+            }
+
+            oldBuckets[b]->remove(it);
+
+            itemSize = 0;
+            if (it->getElement(itemSize) == 0 && it->hasNext() == 0)
+                break;
+        }
+
+        delete it;
+    }
+
+    for (b = 0; b < oldCount; b++)
+        delete oldBuckets[b];
+
+    _memory.freeMem(oldBuckets);
+    return 0;
+}
+
+size_t Table::bucketIndex(void* key, size_t keySize) const
+{
+    return hashKey(key, keySize) % _bucketCount;
 }
 
 Container::Iterator* Table::findRawByKey(size_t bucket, void* key, size_t keySize)
@@ -284,6 +407,9 @@ int Table::insertByKey(void* key, size_t keySize, void* elem, size_t elemSize)
         return 1;
 
     _size++;
+    if (needsRehash())
+        rehash();
+
     return 0;
 }
 

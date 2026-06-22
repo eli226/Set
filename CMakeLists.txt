@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 4.1)
-project(Table_Thread)
+project(set)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
-add_executable(Table_Thread
+add_executable(set
         include/AbstractClasses/ListAbstract.h
         include/AbstractClasses/TableAbstract.h
         include/BaseClasses/Container.h
@@ -21,4 +21,4 @@ add_executable(Table_Thread
         src/containers/Table.cpp
 )
 
-target_include_directories(Table_Thread PRIVATE include)
+target_include_directories(set PRIVATE include)
