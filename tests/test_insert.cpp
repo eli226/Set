@@ -9,10 +9,10 @@ static bool test_insert_small_sequence(Set* set) {
     }
     return true;
 }
-static bool test_insert_million_sequence(Set* set) {
+static bool test_insert_million_sequence(Set* set, size_t size) {
     set->clear();
     auto start = std::chrono::high_resolution_clock::now();
-    for (size_t i = 0; i < 1000000; i++) {
+    for (size_t i = 0; i < size; i++) {
         int res = set->insert(&i, sizeof(int));
         if (res != 0) return false;
     }
@@ -44,8 +44,9 @@ static bool test_insert_duplicate(Set* set) {
     return true;
 }
 
-void SetTests::test_insert() {
+void SetTests::test_insert(size_t size) {
     int count = 0;
+
     if (test_insert_small_sequence(set) == true) {
         cout << "test 1 passed" << endl;
         count++;
@@ -53,7 +54,7 @@ void SetTests::test_insert() {
     else
         cout << "test 1 failed" << endl;
 
-    if (test_insert_million_sequence(set) == true) {
+    if (test_insert_million_sequence(set, size) == true) {
         cout << "test 2 passed" << endl;
         count++;
     }

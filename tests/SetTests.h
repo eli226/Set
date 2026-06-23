@@ -14,11 +14,11 @@ public:
     ~SetTests() {
         delete set;
     }
-    void test_insert();
+    void test_insert(size_t parametr);
     void test_find();
     void test_remove();
     void test_empty();
-    void test_iterator();
+    void test_iterator(size_t size);
 };
 
 #endif //SET_SETTESTS_H
