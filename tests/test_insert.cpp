@@ -1,4 +1,5 @@
 #include "SetTests.h"
+#include <chrono>
 
 static bool test_insert_small_sequence(Set* set) {
     set->clear();
@@ -10,10 +11,15 @@ static bool test_insert_small_sequence(Set* set) {
 }
 static bool test_insert_million_sequence(Set* set) {
     set->clear();
+    auto start = std::chrono::high_resolution_clock::now();
     for (size_t i = 0; i < 1000000; i++) {
         int res = set->insert(&i, sizeof(int));
         if (res != 0) return false;
     }
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::cout << duration.count()/1000.0 << "s" << endl;
+
     return true;
 }
 static bool test_insert_rand_words(Set* set) {

@@ -16,14 +16,14 @@ public:
         ~Iterator() override {
             delete _iter;
         }
-        Container::Iterator* getTableIterator() const { return _iter; }
+        Container::Iterator* getTableIterator() { return _iter; }
         void* getElement(size_t &size) override;
         bool hasNext() override;
         void goToNext() override;
         bool equals(Container::Iterator *right) override;
     };
     Set(MemoryManager& mem) : AbstractSet(mem) {
-        _table = new Table(mem, 100003);
+        _table = new Table(mem);
     };
     ~Set() override {
         delete _table;
